@@ -1,0 +1,25 @@
+.App{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+h1{
+  margin: 0;
+}
+
+.container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 100px;
+  margin-left: 30%;
+  height: 100vh;
+}
+
+button{
+  background-color: rebeccapurple;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
