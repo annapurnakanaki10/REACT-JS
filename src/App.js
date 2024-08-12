@@ -1,15 +1,23 @@
-import "./styles.css";
 
-import { useState } from "react";
+import React, { useState } from 'react'
+import data from './data'
+import SingleQuestion from './Question'
 
-export default function App(){
+const App = () => {
+  const [questions, setQuestions] = useState(data)
 
-  const [show, setShow] = useState(true);
-
-  return(
-    <div className="container">
-      <button onClick={() => setShow((show) => !show)}> SHOW/HIDE</button>
-      {show ? <h1>Welcome to React Challenge</h1> : null}
-    </div>
-  );
+  return (
+    <main>
+      <div className='container'>
+        <h3>questions and answers about login</h3>
+        <section className='info'>
+          {questions.map((question) => (
+            <SingleQuestion key={question.id} {...question} />
+          ))}
+        </section>
+      </div>
+    </main>
+  )
 }
+
+export default App
